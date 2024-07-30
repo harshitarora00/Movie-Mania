@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, {Suspense} from "react";
 import { useSearchParams } from "next/navigation";
 
 const NavbarItem = ({ title, param }) => {
@@ -8,6 +8,7 @@ const NavbarItem = ({ title, param }) => {
   const genre = searchParams.get("genre");
   return (
     <div>
+    <Suspense>
       <Link
         className={`m-4 hover:text-purple-400 font-semibold p-2 
         ${
@@ -19,6 +20,7 @@ const NavbarItem = ({ title, param }) => {
       >
         {title}
       </Link>
+        </Suspense>
     </div>
   );
 };
