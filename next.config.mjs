@@ -1,14 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-   output: {
-     "export"
-   },  // <=== enables static exports
-  reactStrictMode: { 
-    true
+    experimental: {
+    appDir: true,
   },
   images: {
     domains: ["image.tmdb.org"],
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
